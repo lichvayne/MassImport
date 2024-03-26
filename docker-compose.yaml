@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    container_name: mass-import-postgres-container
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_DB=massimport
+    ports:
+      - 5432:5432
